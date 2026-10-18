@@ -1,0 +1,2 @@
+# Bu fayl data/checkpoints papkasi bo'sh bo'lsa ham Git uni saqlab qolishi uchun kerak.
+# O'qitilgan og'ir modellar (transformer_best.json - 222MB) .gitignore orqali chetlab o'tiladi.

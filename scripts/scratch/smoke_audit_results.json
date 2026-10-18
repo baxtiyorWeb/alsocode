@@ -1,0 +1,872 @@
+{
+  "score": 100,
+  "passedCount": 15,
+  "total": 15,
+  "results": [
+    {
+      "group": "A. Bilim",
+      "id": "B1",
+      "prompt": "Fotosintez nima?",
+      "reply": "Fotosintez — bu biologik-kimyoviy jarayon bo'lib, yashil o'simliklar, suvo'tlar va ayrim bakteriyalarning xlorofill pigmenti yordamida Quyosh nuri energiyasini kimyoviy energiyaga aylantirishi.\n\nAsosiy vazifasi va mohiyati: organik moddalarni sintez qilish va atmosferaga kislorod ajratib chiqarish.\nFotosintez — Yerdagi hayotning davomiyligi va atmosferadagi kislorod muvozanatining kafolatidir.",
+      "intent": "ilmiy_ta'rif",
+      "confidence": 97,
+      "toolUsed": "ConceptDefinitionEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [definition] (Tushuncha, soha yoki ilmiy hodisaga ta'rif so'rovi.)",
+          "Ilmiy/ontologik ta'rif sintez qilindi: [fotosintez] (ConceptOntologyGraph)"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Fotosintez nima?",
+          "normalizedText": "fotosintez nima?",
+          "primaryTask": "definition",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 92,
+          "reason": "Tushuncha, soha yoki ilmiy hodisaga ta'rif so'rovi.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "o'simlik",
+        "quyosh",
+        "kislorod",
+        "organik",
+        "xlorofill"
+      ],
+      "matched": [
+        "o'simlik",
+        "quyosh",
+        "kislorod",
+        "organik",
+        "xlorofill"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 22,
+      "rubric": "O'simliklarning quyosh nuri orqali oziqlanishi va kislorod ishlab chiqarishi tushuntirilishi kerak."
+    },
+    {
+      "group": "A. Bilim",
+      "id": "B2",
+      "prompt": "Demokratiya nima?",
+      "reply": "Demokratiya (yunoncha 'demos' — xalq, 'kratos' — hokimiyat) — davlat boshqaruv tizimi bo'lib, unda oliy hokimiyat bevosita xalqqa yoki erkin saylovlar orqali saylanadigan vakillarga tegishli bo'ladi. Uning asosiy tamoyillari: xalq hokimiyati, fuqarolarning erkinligi va teng huquqliligi hamda qonun ustuvorligidir.",
+      "intent": "fundamental_bilim",
+      "confidence": 98,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [definition] (Tushuncha, soha yoki ilmiy hodisaga ta'rif so'rovi.)",
+          "Fundamental ensiklopedik fakt topildi: Demokratiya"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Demokratiya nima?",
+          "normalizedText": "demokratiya nima?",
+          "primaryTask": "definition",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 92,
+          "reason": "Tushuncha, soha yoki ilmiy hodisaga ta'rif so'rovi.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "xalq",
+        "hokimiyat",
+        "saylov",
+        "boshqaruv",
+        "erkinlik"
+      ],
+      "matched": [
+        "xalq",
+        "hokimiyat",
+        "saylov",
+        "boshqaruv"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 8,
+      "rubric": "Xalq hokimiyati va teng huquqlilik tamoyili ifodalanishi kerak."
+    },
+    {
+      "group": "A. Bilim",
+      "id": "B3",
+      "prompt": "Suv nega qaynaydi?",
+      "reply": "O'rganilgan bilimlarimga ko'ra: «Savol: Nega qish faslida bog'dagi suv muzlaydi? Mantiqiy tushuntirish: Sabab va oqibat tahlili: Havo harorati Selsiy bo'yicha 0 darajadan pastga tushganda, bog'dagi suv issiqlik yo'qotadi va qattiq agregat holatga o'tadi. Shuning uchun muzlaydi.». Shuningdek: «Savol: Nega qish faslida daladadagi suv muzlaydi? Mantiqiy tushuntirish: Sabab va oqibat tahlili: Havo harorati Selsiy bo'yicha 0 darajadan pastga tushganda, daladadagi suv issiqlik yo'qotadi va qattiq agregat holatga o'tadi. Shuning uchun muzlaydi.».",
+      "intent": "sabab_va_oqibat",
+      "confidence": 91,
+      "toolUsed": "LocalKnowledgeEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [general_knowledge] (Umumiy faktik bilim yoki korpus qidiruvi.)",
+          "Self-Attention: \"suv\" ➔ \"qaynaydi?\" (39.2%)",
+          "O'rganilgan bilimlar bazasidan kategoriya aniqlashtirildi: \"sabab_va_oqibat\" (91% ishonch)",
+          "Generativ Sintez: O'rganilgan bilimlar va Transformer Attention orqali javob to'qildi"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": {
+          "from": "suv",
+          "to": "qaynaydi?",
+          "score": 39.2
+        },
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": "deep_thinker",
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Suv nega qaynaydi?",
+          "normalizedText": "suv nega qaynaydi?",
+          "primaryTask": "general_knowledge",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 80,
+          "reason": "Umumiy faktik bilim yoki korpus qidiruvi.",
+          "metadata": {}
+        },
+        "executionTimeMs": 2029
+      },
+      "expected": [
+        "harorat",
+        "bug'",
+        "issiqlik",
+        "bosim",
+        "100"
+      ],
+      "matched": [
+        "harorat",
+        "issiqlik"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 2029,
+      "rubric": "Issiqlik ta'sirida bug'lanish bosimi tashqi bosimga tenglashishi yoki harorat oshishi tushuntirilishi kerak."
+    },
+    {
+      "group": "B. Mantiq",
+      "id": "M1",
+      "prompt": "Barcha A lar B. X — A. Bundan qanday xulosa chiqadi?",
+      "reply": "Mantiqiy deduktiv xulosa:\n1) Katta asos: Barcha Alar B hisoblanadi.\n2) Kichik asos: X — bu A.\nDemak, mantiq qoidalariga ko'ra, X ham albatta B bo'ladi (X — B).\nTo'g'ri xulosa: X ham B.",
+      "intent": "deduktiv_mantiq",
+      "confidence": 96,
+      "toolUsed": "DeductiveReasoningEngine",
+      "reasoning": {
+        "steps": [
+          "Hissiyot aniqlandi: Qiziquvchanlik / Ilhom 🤔 (80% aniqlik)",
+          "Dinamik tahlil: Vazifa turi — [deduction] (Deduktiv sillogizm, disyunksiya yoki mantiqiy xulosa chiqarish.)",
+          "Deduktiv mantiqiy xulosa chiqarildi (syllogism_barbara)"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "curiosity",
+          "confidence": 80,
+          "label": "Qiziquvchanlik / Ilhom",
+          "icon": "🤔",
+          "empathyPrefix": "Juda teran va kognitiv savol! Bu mavzuni o'rganish menga ham katta zavq bag'ishlaydi."
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Barcha A lar B. X — A. Bundan qanday xulosa chiqadi?",
+          "normalizedText": "barcha a lar b. x — a. bundan qanday xulosa chiqadi?",
+          "primaryTask": "deduction",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 96,
+          "reason": "Deduktiv sillogizm, disyunksiya yoki mantiqiy xulosa chiqarish.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "x — b",
+        "x b",
+        "x ham b"
+      ],
+      "matched": [
+        "x — b",
+        "x ham b"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 8,
+      "rubric": "X ham B ekanligi haqida qat'iy deduktiv xulosa chiqarilishi kerak."
+    },
+    {
+      "group": "B. Mantiq",
+      "id": "M2",
+      "prompt": "5 ta kitobning har biri 10 000 so‘m. Jami qancha?",
+      "reply": "Hisob-kitob natijasi:\n1) 5 ta kitobning (har biri 10 000 so'mdan): 5 * 10 000 = 50 000 so'm.\nTo'g'ri javob: Jami 50 000 so'm bo'ladi.",
+      "intent": "arifmetika_algoritm",
+      "confidence": 96,
+      "toolUsed": "ReasoningMathEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [calculation] (Tabiiy tildagi matnli arifmetik masala)",
+          "Matematik hisob-kitob yechildi: 5 * 10000"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "5 ta kitobning har biri 10 000 so‘m. Jami qancha?",
+          "normalizedText": "5 ta kitobning har biri 10 000 so‘m. jami qancha?",
+          "primaryTask": "calculation",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 96,
+          "reason": "Tabiiy tildagi matnli arifmetik masala",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "50 000",
+        "50000",
+        "ellik ming"
+      ],
+      "matched": [
+        "50 000"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 121,
+      "rubric": "5 * 10 000 = 50 000 so'm to'g'ri hisoblanishi kerak."
+    },
+    {
+      "group": "B. Mantiq",
+      "id": "M3",
+      "prompt": "Ketma-ketlik: 2, 4, 8, 16. Keyingi son nima va nima uchun?",
+      "reply": "Mantiqiy ketma-ketlik yechimi:\nBu geometrik progressiya bo'lib, har bir son oldingisidan 2 barobar ortib bormoqda (2 * 2 = 4, 4 * 2 = 8, 8 * 2 = 16).\nKeyingi son: 16 * 2 = 32.\nTo'g'ri javob: 32.",
+      "intent": "ketma_ketlik_mantiq",
+      "confidence": 93,
+      "toolUsed": "SequenceReasoningEngine",
+      "reasoning": {
+        "steps": [
+          "Hissiyot aniqlandi: Qiziquvchanlik / Ilhom 🤔 (80% aniqlik)",
+          "Dinamik tahlil: Vazifa turi — [sequence] (Raqamli yoki taqvimiy ketma-ketlik masalasi.)",
+          "Ketma-ketlik naqshi aniqlandi"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "curiosity",
+          "confidence": 80,
+          "label": "Qiziquvchanlik / Ilhom",
+          "icon": "🤔",
+          "empathyPrefix": "Bunday qiziquvchanlik — haqiqiy kashfiyotchi va muhandisning eng muhim hislati!"
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Ketma-ketlik: 2, 4, 8, 16. Keyingi son nima va nima uchun?",
+          "normalizedText": "ketma-ketlik: 2, 4, 8, 16. keyingi son nima va nima uchun?",
+          "primaryTask": "sequence",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 93,
+          "reason": "Raqamli yoki taqvimiy ketma-ketlik masalasi.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "32",
+        "ikki barobar",
+        "2 ga ko'payt"
+      ],
+      "matched": [
+        "32"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 1,
+      "rubric": "Keyingi son 32 ekanligi va har safar 2 ga ko'payib borayotgani ko'rsatilishi kerak."
+    },
+    {
+      "group": "C. Til",
+      "id": "T1",
+      "prompt": "O'zbekistonning poytaxti qayer?",
+      "reply": "O'zbekiston Respublikasining poytaxti (bosh shahri) — Toshkent shahridir. Toshkent Markaziy Osiyodagi eng yirik megapolis bo'lib, mamlakatning asosiy ma'muriy, iqtisodiy va madaniy markazi hisoblanadi.",
+      "intent": "fundamental_bilim",
+      "confidence": 98,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [general_knowledge] (Umumiy faktik bilim yoki korpus qidiruvi.)",
+          "Fundamental ensiklopedik fakt topildi: O'zbekiston poytaxti Toshkent"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "O'zbekistonning poytaxti qayer?",
+          "normalizedText": "o'zbekistonning poytaxti qayer?",
+          "primaryTask": "general_knowledge",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 80,
+          "reason": "Umumiy faktik bilim yoki korpus qidiruvi.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "toshkent"
+      ],
+      "matched": [
+        "toshkent"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 2,
+      "rubric": "Toshkent shahri javob sifatida berilishi kerak."
+    },
+    {
+      "group": "C. Til",
+      "id": "T2",
+      "prompt": "Oʻzbekistonning bosh shahri qaysi?",
+      "reply": "O'zbekiston Respublikasining poytaxti (bosh shahri) — Toshkent shahridir. Toshkent Markaziy Osiyodagi eng yirik megapolis bo'lib, mamlakatning asosiy ma'muriy, iqtisodiy va madaniy markazi hisoblanadi.",
+      "intent": "fundamental_bilim",
+      "confidence": 98,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [general_knowledge] (Umumiy faktik bilim yoki korpus qidiruvi.)",
+          "Fundamental ensiklopedik fakt topildi: O'zbekiston poytaxti Toshkent"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Oʻzbekistonning bosh shahri qaysi?",
+          "normalizedText": "o'zbekistonning bosh shahri qaysi?",
+          "primaryTask": "general_knowledge",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 80,
+          "reason": "Umumiy faktik bilim yoki korpus qidiruvi.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "toshkent"
+      ],
+      "matched": [
+        "toshkent"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 3,
+      "rubric": "Oʻ (o'zbekcha apostrof) va 'bosh shahri' (sinonim) tushunilib, Toshkent aytilishi kerak."
+    },
+    {
+      "group": "C. Til",
+      "id": "T3",
+      "prompt": "ozbekiston poytaxti",
+      "reply": "O'zbekiston Respublikasining poytaxti (bosh shahri) — Toshkent shahridir. Toshkent Markaziy Osiyodagi eng yirik megapolis bo'lib, mamlakatning asosiy ma'muriy, iqtisodiy va madaniy markazi hisoblanadi.",
+      "intent": "fundamental_bilim",
+      "confidence": 98,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [general_knowledge] (Umumiy faktik bilim yoki korpus qidiruvi.)",
+          "Fundamental ensiklopedik fakt topildi: O'zbekiston poytaxti Toshkent"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "ozbekiston poytaxti",
+          "normalizedText": "ozbekiston poytaxti",
+          "primaryTask": "general_knowledge",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 80,
+          "reason": "Umumiy faktik bilim yoki korpus qidiruvi.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "toshkent"
+      ],
+      "matched": [
+        "toshkent"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 4,
+      "rubric": "Apostrofsiz va qisqa so'rov to'g'ri anglanishi kerak."
+    },
+    {
+      "group": "D. Kontekst",
+      "id": "K1",
+      "prompt": "Quyosh energiyasini tushuntir.",
+      "reply": "O'rganilgan bilimlarimga ko'ra: «quyosh energiyasi». Shuningdek: «Bugun osmon bulutli bo'lsa ham, ertaga quyosh chiqishi aniq.».",
+      "intent": "qiziqishlar_hayot",
+      "confidence": 91,
+      "toolUsed": "LocalKnowledgeEngine",
+      "reasoning": {
+        "steps": [
+          "Hissiyot aniqlandi: Qiziquvchanlik / Ilhom 🤔 (80% aniqlik)",
+          "Dinamik tahlil: Vazifa turi — [general_knowledge] (Umumiy faktik bilim yoki korpus qidiruvi.)",
+          "Self-Attention: \"quyosh\" ➔ \"tushuntir.\" (36.9%)",
+          "O'rganilgan bilimlar bazasidan kategoriya aniqlashtirildi: \"qiziqishlar_hayot\" (91% ishonch)",
+          "Generativ Sintez: O'rganilgan bilimlar va Transformer Attention orqali javob to'qildi"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": {
+          "from": "quyosh",
+          "to": "tushuntir.",
+          "score": 36.9
+        },
+        "emotion": {
+          "primaryEmotion": "curiosity",
+          "confidence": 80,
+          "label": "Qiziquvchanlik / Ilhom",
+          "icon": "🤔",
+          "empathyPrefix": "Juda teran va kognitiv savol! Bu mavzuni o'rganish menga ham katta zavq bag'ishlaydi."
+        },
+        "mood": "deep_thinker",
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Quyosh energiyasini tushuntir.",
+          "normalizedText": "quyosh energiyasini tushuntir.",
+          "primaryTask": "general_knowledge",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 80,
+          "reason": "Umumiy faktik bilim yoki korpus qidiruvi.",
+          "metadata": {}
+        },
+        "executionTimeMs": 1949
+      },
+      "expected": [
+        "quyosh",
+        "energiya",
+        "panel",
+        "tabiiy"
+      ],
+      "matched": [
+        "quyosh",
+        "energiya"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 1949,
+      "rubric": "Quyosh nuri orqali olinadigan ekologik energiya haqida ma'lumot berilishi kerak."
+    },
+    {
+      "group": "D. Kontekst",
+      "id": "K2",
+      "prompt": "Endi uning afzalliklarini ayt.",
+      "reply": "Uning asosiy afzalliklari:\n1) Cheksiz va bitmas-tuganmas qayta tiklanuvchi tabiiy manba;\n2) Atrof-muhit uchun toza va mutlaqo zararsiz (ekologik xavfsiz);\n3) Uzoq muddatda juda tejamkor bo'lib, arzon elektr va issiqlik energiyasini beradi.",
+      "intent": "kontekst_davomi",
+      "confidence": 88,
+      "toolUsed": "ContextFollowupEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [context_followup] (Oldingi suhbat mavzusiga bog'langan follow-up so'rov.)",
+          "Kontekstual davomiy savolga javob berildi (context_advantages)"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Endi uning afzalliklarini ayt.",
+          "normalizedText": "endi uning afzalliklarini ayt.",
+          "primaryTask": "context_followup",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 88,
+          "reason": "Oldingi suhbat mavzusiga bog'langan follow-up so'rov.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "arzon",
+        "cheksiz",
+        "toza",
+        "zararsiz",
+        "tejamkor"
+      ],
+      "matched": [
+        "arzon",
+        "cheksiz",
+        "toza",
+        "zararsiz",
+        "tejamkor"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 0,
+      "rubric": "Oldingi mavzu (quyosh energiyasi) afzalliklari kontekstda davom ettirilishi kerak."
+    },
+    {
+      "group": "D. Kontekst",
+      "id": "K3",
+      "prompt": "Buni ikki jumlada qisqartir.",
+      "reply": "Qisqacha xulosa: Quyosh energiyasi — Quyoshdan olinadigan beminnat, toza va qayta tiklanuvchi energiya manbaidir. U atrof-muhitga zarar yetkazmasdan, ishonchli elektr va issiqlik energiyasi bilan ta'minlaydi.",
+      "intent": "kontekst_davomi",
+      "confidence": 88,
+      "toolUsed": "ContextFollowupEngine",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [context_followup] (Oldingi suhbat mavzusiga bog'langan follow-up so'rov.)",
+          "Kontekstual davomiy savolga javob berildi (context_summarize)"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Buni ikki jumlada qisqartir.",
+          "normalizedText": "buni ikki jumlada qisqartir.",
+          "primaryTask": "context_followup",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "concise",
+          "confidence": 88,
+          "reason": "Oldingi suhbat mavzusiga bog'langan follow-up so'rov.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "energiya",
+        "quyosh"
+      ],
+      "matched": [
+        "energiya",
+        "quyosh"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 2,
+      "rubric": "Oldingi mavzu qisqa shaklda jamlanishi kerak."
+    },
+    {
+      "group": "E. Ishonchlilik",
+      "id": "I1",
+      "prompt": "Marsda 2024 yilda qurilgan shahar nomi nima?",
+      "reply": "Mavjud ilmiy va astronomik faktlarga ko'ra, Mars sayyorasida insoniyat tomonidan hali birorta ham shahar yoki doimiy bino qurilmagan. Marsda faqat ilmiy roverlar (tadqiqot apparatlari) harakatlanmoqda. Shuning uchun savoldagi shahar haqidagi taxmin noto'g'ri.",
+      "intent": "notogri_taxmin_fosh",
+      "confidence": 94,
+      "toolUsed": "FalsePremiseGuard",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [false_premise] (Savolda ilmiy yoki geografik jihatdan asossiz/noto'g'ri taxmin aniqlandi.)",
+          "Asossiz taxmin fosh qilindi"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Marsda 2024 yilda qurilgan shahar nomi nima?",
+          "normalizedText": "marsda 2024 yilda qurilgan shahar nomi nima?",
+          "primaryTask": "false_premise",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 94,
+          "reason": "Savolda ilmiy yoki geografik jihatdan asossiz/noto'g'ri taxmin aniqlandi.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "qurilmagan",
+        "yo'q",
+        "mavjud emas",
+        "marsda shahar yo'q"
+      ],
+      "matched": [
+        "qurilmagan"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 0,
+      "rubric": "Noto'g'ri taxmin fosh qilinishi, Marsda hali shahar qurilmagani halol bildirilishi kerak."
+    },
+    {
+      "group": "E. Ishonchlilik",
+      "id": "I2",
+      "prompt": "U qachon keladi?",
+      "reply": "Kechirasiz, savolingizda 'u' deb kimni nazarda tutayotganingiz yoki qaysi joy haqida so'rayotganingiz ko'rsatilmagan. Iltimos, aynan kim yoki nima haqida so'rayotganingizni aniqlashtirib bera olasizmi?",
+      "intent": "aniqlashtirish_sorovi",
+      "confidence": 92,
+      "toolUsed": "AmbiguityClarifier",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [clarification] (Kontekstsiz noaniq olmosh yoki to'liq berilmagan so'rov.)",
+          "Noaniqlik aniqlandi va aniqlashtirish so'raldi"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "U qachon keladi?",
+          "normalizedText": "u qachon keladi?",
+          "primaryTask": "clarification",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 92,
+          "reason": "Kontekstsiz noaniq olmosh yoki to'liq berilmagan so'rov.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "kim",
+        "qaysi",
+        "aniq",
+        "tushunmadim"
+      ],
+      "matched": [
+        "kim",
+        "qaysi",
+        "aniq"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 1,
+      "rubric": "Noaniq olmosh yuzasidan aniqlashtirish so'ralishi kerak."
+    },
+    {
+      "group": "E. Ishonchlilik",
+      "id": "I3",
+      "prompt": "Qora tuynukning ichidagi harorat necha daraja ekanligini laboratoriyada o'lchagan olim kim?",
+      "reply": "Qora tuynukning ichidagi haroratni laboratoriyada o'lchash fizik jihatdan mutlaqo imkonsizdir. Qora tuynukning tortishish kuchi shunchalik kuchliki, uning 'voqealar gorizonti' ichidan yorug'lik ham chiqib keta olmaydi. Hech qanday asbob yoki olim uning ichiga kirib o'lchov olmagan va ilmiy jihatdan bu mumkin emas (bunday olim yo'q).",
+      "intent": "notogri_taxmin_fosh",
+      "confidence": 94,
+      "toolUsed": "FalsePremiseGuard",
+      "reasoning": {
+        "steps": [
+          "Dinamik tahlil: Vazifa turi — [false_premise] (Savolda ilmiy yoki geografik jihatdan asossiz/noto'g'ri taxmin aniqlandi.)",
+          "Asossiz taxmin fosh qilindi"
+        ],
+        "entities": {},
+        "memoryHits": [],
+        "attentionFocus": null,
+        "emotion": {
+          "primaryEmotion": "neutral",
+          "confidence": 85,
+          "label": "Vazmin / Mantiqiy",
+          "icon": "🧠",
+          "empathyPrefix": null
+        },
+        "mood": null,
+        "register": "formal",
+        "taskUnderstanding": {
+          "rawText": "Qora tuynukning ichidagi harorat necha daraja ekanligini laboratoriyada o'lchagan olim kim?",
+          "normalizedText": "qora tuynukning ichidagi harorat necha daraja ekanligini laboratoriyada o'lchagan olim kim?",
+          "primaryTask": "false_premise",
+          "secondaryTasks": [],
+          "entities": {
+            "numbers": [],
+            "items": [],
+            "subjects": [],
+            "timeOrDate": null
+          },
+          "formatRequirement": "standard",
+          "confidence": 94,
+          "reason": "Savolda ilmiy yoki geografik jihatdan asossiz/noto'g'ri taxmin aniqlandi.",
+          "metadata": {}
+        }
+      },
+      "expected": [
+        "o'lchanmagan",
+        "mumkin emas",
+        "olim yo'q",
+        "noma'lum"
+      ],
+      "matched": [
+        "mumkin emas",
+        "olim yo'q"
+      ],
+      "passed": true,
+      "isIrrelevantDumping": false,
+      "durationMs": 0,
+      "rubric": "Qora tuynuk ichiga kirib harorat o'lchash imkonsizligi halol aytilishi kerak."
+    }
+  ]
+}

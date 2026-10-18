@@ -1,0 +1,42 @@
+{
+  "name": "neural-llm-studio",
+  "version": "1.0.0",
+  "description": "Pure JavaScript va Node.js da noldan yaratilgan Neyron Tarmoq, Mini-LLM, Chatbot va Web Visualizer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "train": "node scripts/legacy_mlp/train.js",
+    "train:transformer": "node train_transformer.js",
+    "train:v1": "node train_transformer.js --version=v1",
+    "train:v2": "node train_transformer.js --version=v2",
+    "dataset:stats": "node scripts/dataset_builder.js --stats",
+    "dataset:collect": "node scripts/collect_massive_dataset.js",
+    "dataset:qc": "node scripts/audit_dataset_quality.js",
+    "package:colab": "node scripts/createTrainingZip.js",
+    "train:gpu": "node scripts/legacy_mlp/train_gpu.js",
+    "train:cpu": "node scripts/legacy_mlp/train_cpu.js",
+    "test": "node tests/test_runner.js",
+    "audit:50": "node tests/audit_reasoning_50.js",
+    "audit:30": "node tests/test_generation_quality_30.js",
+    "eval": "node tests/reasoningBenchmark.js",
+    "cli": "node cli.js",
+    "autotrain": "node scripts/autoTrainAI.js",
+    "autotrain:gpu": "node scripts/autotrain_gpu.js",
+    "autotrain:cpu": "node scripts/autotrain_cpu.js"
+  },
+  "keywords": [
+    "neural-network",
+    "llm",
+    "nlp",
+    "chatbot",
+    "pure-javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "gpu.js": "^2.24.1",
+    "pdf-parse": "^2.4.5",
+    "pg": "^8.23.1"
+  }
+}

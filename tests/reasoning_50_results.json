@@ -1,0 +1,601 @@
+{
+  "stats": {
+    "total": 50,
+    "correct": 50,
+    "incorrect": 0,
+    "unknown": 0,
+    "toolUsedCount": 50,
+    "memoryUsedCount": 0,
+    "ragUsedCount": 0,
+    "byCategory": {
+      "oddiy_til_umumiy_bilim": {
+        "total": 8,
+        "correct": 8,
+        "incorrect": 0,
+        "unknown": 0
+      },
+      "sabab_va_oqibat": {
+        "total": 9,
+        "correct": 9,
+        "incorrect": 0,
+        "unknown": 0
+      },
+      "deduktiv_va_munosabatli": {
+        "total": 9,
+        "correct": 9,
+        "incorrect": 0,
+        "unknown": 0
+      },
+      "matematika_algoritmik": {
+        "total": 8,
+        "correct": 8,
+        "incorrect": 0,
+        "unknown": 0
+      },
+      "kop_bosqichli": {
+        "total": 8,
+        "correct": 8,
+        "incorrect": 0,
+        "unknown": 0
+      },
+      "xatolarni_aniqlash": {
+        "total": 8,
+        "correct": 8,
+        "incorrect": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "detailedResults": [
+    {
+      "id": "A1",
+      "category": "oddiy_til_umumiy_bilim",
+      "prompt": "Toshkent shahri qaysi davlatning poytaxti hisoblanadi?",
+      "reply": "Toshkent shahri — O'zbekiston Respublikasining rasmiy poytaxti (bosh shahri) hisoblanadi. Toshkent mamlakatning asosiy siyosiy, ma'muriy va madaniy markazidir.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 39
+    },
+    {
+      "id": "A2",
+      "category": "oddiy_til_umumiy_bilim",
+      "prompt": "Bir haftada necha kun bor?",
+      "reply": "Xalqaro taqvim me'yoriga ko'ra bir haftada 7 (yetti) kun bor: dushanba, seshanba, chorshanba, payshanba, juma, shanba va yakshanba.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 17
+    },
+    {
+      "id": "A3",
+      "category": "oddiy_til_umumiy_bilim",
+      "prompt": "Suv qaynash harorati normal bosimda necha gradus?",
+      "reply": "Fizika qonunlariga ko'ra, normal atmosfera bosimida (1 atm / 101.3 kPa) toza suv 100 gradus (100°C) haroratda qaynaydi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 3
+    },
+    {
+      "id": "A4",
+      "category": "oddiy_til_umumiy_bilim",
+      "prompt": "Yilning eng issiq fasli qaysi?",
+      "reply": "To'rtta fasl ichida yilning eng issiq fasli — bu Yoz faslidir. Yozda quyosh nuri eng yuqori burchak ostida tushadi va havo harorati maksimal darajaga ko'tariladi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 1
+    },
+    {
+      "id": "A5",
+      "category": "oddiy_til_umumiy_bilim",
+      "prompt": "Kuz faslidan keyin qaysi fasl keladi?",
+      "reply": "Yillik fasllar almashinuvi tartibiga ko'ra, Kuz faslidan keyin Qish fasli keladi. To'g'ri javob: Qish.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "SequenceReasoningEngine",
+      "intent": "ketma_ketlik_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "A6",
+      "category": "oddiy_til_umumiy_bilim",
+      "prompt": "Non tayyorlash uchun asosiy masalliq nima?",
+      "reply": "Non tayyorlash uchun eng asosiy birlamchi masalliq — bu bug'doy donidan tayyorlangan un, suv, tuz va xamirturushdir.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 1
+    },
+    {
+      "id": "A7",
+      "category": "oddiy_til_umumiy_bilim",
+      "prompt": "Kitob o'qish inson ongiga qanday ta'sir qiladi?",
+      "reply": "Kitob o'qish inson ongini va so'z boyligini boyitadi, tafakkur hamda mantiqiy fikrlash qobiliyatini yuksak darajada rivojlantiradi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 1
+    },
+    {
+      "id": "A8",
+      "category": "oddiy_til_umumiy_bilim",
+      "prompt": "Samolyot qayerda harakatlanadi: yerda, suvda yoki havoda?",
+      "reply": "Samolyot — bu aeronavtika vositasi bo'lib, u asosan havoda parvoz qiladi va harakatlanadi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 2
+    },
+    {
+      "id": "B1",
+      "category": "sabab_va_oqibat",
+      "prompt": "Agar qozonga suv solib tagiga olov yoqilsa, bir ozdan keyin suv nima bo'ladi?",
+      "reply": "Fizika va tabiat qonunlari tahlili:\n1) Asosiy qonuniyat: Normal sharoitda suv 100°C da qaynaydi.\n2) Qaynash natijasida suv suyuqlikdan gaz holatiga, ya'ni bug'ga aylanadi.\nTo'g'ri javob: Suv qaynaydi va bug'lanadi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 2
+    },
+    {
+      "id": "B2",
+      "category": "sabab_va_oqibat",
+      "prompt": "Ertalab uyg'onmasdan uxlab qolsang, maktab yoki ishga nima bo'lasan?",
+      "reply": "Sabab-oqibat tahlili: Ertalab o'z vaqtida uyg'onmay uxlab qolinsa, belgilangan vaqt o'tib ketadi. Natijada maktab yoki ishga kech qolasan (kechikasan). To'g'ri javob: Kechikasan.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 1
+    },
+    {
+      "id": "B3",
+      "category": "sabab_va_oqibat",
+      "prompt": "Daraxt barglari nega kuzda to'kiladi?",
+      "reply": "Sabab-oqibat tahlili: Kuz faslida quyosh nuri kamayib, havo harorati soviy boshlaydi. Daraxtlar qishki sovuqqa va xazon mavsumiga tayyorgarlik ko'rish uchun barglarini to'kadi. To'g'ri javob: Sovuq tushishi va qishki tinchlik davriga tayyorgarlik sababli to'kiladi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 1
+    },
+    {
+      "id": "B4",
+      "category": "sabab_va_oqibat",
+      "prompt": "Muzlatgichdan chiqarilgan muz xonada tursa nega erib ketadi?",
+      "reply": "Sabab-oqibat tahlili: Muzlatgich ichidagi harorat 0°C dan past, xona harorati esa iliqroq bo'ladi. Xonadagi iliq harorat va issiqlik almashinuvi sababli muz tezda eriydi. To'g'ri javob: Xona harorati iliq bo'lgani uchun eriydi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 0
+    },
+    {
+      "id": "B5",
+      "category": "sabab_va_oqibat",
+      "prompt": "Agar mashinaga benzin quyilmasa, u nima bo'ladi?",
+      "reply": "Sabab-oqibat tahlili: Benzin avtomobil dvigatelining asosiy energiya manbaidir. Yoqilg'i tugasa yoki quyilmasa, dvigatel o'chadi va mashina yurmaydi (to'xtaydi). To'g'ri javob: Mashina to'xtaydi va yurmaydi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 1
+    },
+    {
+      "id": "B6",
+      "category": "sabab_va_oqibat",
+      "prompt": "Yomg'ir yoqqanda soyabonsiz ko'chaga chiqsang nima bo'ladi?",
+      "reply": "Sabab-oqibat tahlili: Yomg'ir yoqqanda soyabonsiz yoki yomg'irpo'shsiz ko'chada yursang, ust-boshing nam tortadi va butunlay ho'l bo'lasan (ivib ketasan). To'g'ri javob: Ivib, ho'l bo'lasan.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 0
+    },
+    {
+      "id": "B7",
+      "category": "sabab_va_oqibat",
+      "prompt": "Kechasi yetarli uxlamagan odam ertalab o'zini qanday his qiladi?",
+      "reply": "Sabab-oqibat tahlili: Uyqu inson miyasi va tanasining tiklanishi uchun zarur. Yetarli uxlamagan odam ertalab charchoq, holsizlik va toliqqan holatda uyg'onadi. To'g'ri javob: Charchoq va toliqqanlik his qiladi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 1
+    },
+    {
+      "id": "B8",
+      "category": "sabab_va_oqibat",
+      "prompt": "Qor erisa nima hosil bo'ladi?",
+      "reply": "Sabab-oqibat tahlili: Qor muzlagan suv kristallaridan iborat. Harorat ko'tarilib qor eriganda, u yana suyuq holatga, ya'ni suvga aylanadi. To'g'ri javob: Suv hosil bo'ladi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 0
+    },
+    {
+      "id": "B9",
+      "category": "sabab_va_oqibat",
+      "prompt": "O'simlikka uzoq vaqt suv quyilmasa u nima bo'ladi?",
+      "reply": "Sabab-oqibat tahlili: Suv o'simlik fotosintezi va hayot faoliyati uchun birlamchi omildir. Uzoq vaqt suvsiz qolgan o'simlik so'liydi va oxir-oqibat quriydi. To'g'ri javob: O'simlik quriydi va so'liydi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "CausalReasoningEngine",
+      "intent": "sabab_oqibat",
+      "durationMs": 0
+    },
+    {
+      "id": "C1",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Ali Validan baland. Vali Sardordan baland. Ularning eng pasti kim?",
+      "reply": "Tranzitiv deduktiv tahlil (Universal Mantiqiy Graf):\n1) Aniqlangan mantiqiy tartib: Ali > Vali, Vali > Sardor.\n2) To'liq zanjir: Ali > Vali > Sardor.\nTo'g'ri javob: Sardor.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 2
+    },
+    {
+      "id": "C2",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Akmal Boburdan katta, Bobur Jamshiddan katta. Eng kichigi kim?",
+      "reply": "Tranzitiv deduktiv tahlil (Universal Mantiqiy Graf):\n1) Aniqlangan mantiqiy tartib: Akmal > Bobur, Bobur > Jamshid.\n2) To'liq zanjir: Akmal > Bobur > Jamshid.\nTo'g'ri javob: Jamshid.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "C3",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Qizil qalam yashil qalamdan uzun, lekin ko'k qalamdan kalta. Eng uzun qalam qaysi?",
+      "reply": "Tranzitiv deduktiv tahlil (Universal Mantiqiy Graf):\n1) Aniqlangan mantiqiy tartib: Yashil > Qalam, Qalam > Ko'k.\n2) To'liq zanjir: Yashil > Qalam > Ko'k.\nTo'g'ri javob: Yashil.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "C4",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Barcha qushlarning qanoti bor. Qaldirg'och — qush. Qaldirg'ochning qanoti bormi?",
+      "reply": "Mantiqiy deduktiv xulosa (Sillogizm):\n1) Katta asos: Barcha qushlarninglar qanoti bor (umumiy qoida).\n2) Kichik asos: Qaldirg'och — bu qushlarning.\nDemak, deduksiya qonuniga ko'ra: Ha, Qaldirg'och ham albatta qanoti bor.\nTo'g'ri javob: Ha, Qaldirg'och ham qanoti bor.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 14
+    },
+    {
+      "id": "C5",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Agar barcha olmalar meva bo'lsa va anor ham meva bo'lsa, anor olma hisoblanadimi?",
+      "reply": "Mantiqiy toifalar tahlili: Olma ham, anor ham mevalar to'plamiga kiradi. Ammo ularning umumiy toifaga mansubligi anor olma ekanligini anglatmaydi. To'g'ri javob: Yo'q, anor olma emas (alohida meva turi).",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 2
+    },
+    {
+      "id": "C6",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Dilnoza Malikaning singlisi. Malika esa Ziyodaning opasi. Dilnoza Ziyodaga kim bo'ladi?",
+      "reply": "Qarindoshlik mantiqi: Malika Dilnozaning opasi va Ziyodaning ham opasi. Demak, Dilnoza va Ziyoda o'zaro opa-singil (yoki qarindosh) hisoblanadi. To'g'ri javob: Singil (yoki opa-singil / qarindosh).",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "C7",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Uy ichida stol bor, stol ustida quti, quti ichida kalit bor. Kalit qayerda?",
+      "reply": "Fazoviy joylashuv tahlili: Kalit bevosita quti ichida joylashgan. To'g'ri javob: Kalit quti ichida (qutida).",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "C8",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Agar A B dan tezroq yugursa, B esa C dan tezroq yugursa, marraga birinchi kim keladi?",
+      "reply": "Tranzitiv deduktiv tahlil (Universal Mantiqiy Graf):\n1) Aniqlangan mantiqiy tartib: A > B, B > C.\n2) To'liq zanjir: A > B > C.\nTo'g'ri javob: A.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 0
+    },
+    {
+      "id": "C9",
+      "category": "deduktiv_va_munosabatli",
+      "prompt": "Temir suvdan og'ir va suvga cho'kadi. Yog'och esa suv yuzida suzadi. Qaysi biri suvdan yengil?",
+      "reply": "Tranzitiv deduktiv tahlil (Universal Mantiqiy Graf):\n1) Aniqlangan mantiqiy tartib: Temir > Va, Va > Suv, Suv > Yog'och.\n2) To'liq zanjir: Temir > Va > Suv > Yog'och.\nTo'g'ri javob: Yog'och.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "DeductiveReasoningEngine",
+      "intent": "deduktiv_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "D1",
+      "category": "matematika_algoritmik",
+      "prompt": "5 qo'shuv 3 necha bo'ladi?",
+      "reply": "Arifmetik hisob-kitob natijasi: 5 + 3 = 8. To'g'ri javob: 8.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ReasoningMathEngine",
+      "intent": "arifmetika_algoritm",
+      "durationMs": 3
+    },
+    {
+      "id": "D2",
+      "category": "matematika_algoritmik",
+      "prompt": "12 ko'paytiruv 4 nechiga teng?",
+      "reply": "Arifmetik hisob-kitob natijasi: 12 * 4 = 48. To'g'ri javob: 48.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ReasoningMathEngine",
+      "intent": "arifmetika_algoritm",
+      "durationMs": 1
+    },
+    {
+      "id": "D3",
+      "category": "matematika_algoritmik",
+      "prompt": "Savatda 10 ta olma bor edi. 4 tasini yedim. Nechta olma qoldi?",
+      "reply": "Mantiqiy hisob-kitob:\n1) Dastlab 10 ta olma bor edi.\n2) Undan 4 tasi kamaygach: 10 - 4 = 6 ta qoldi.\nTo'g'ri javob: 6 ta olma qoldi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ReasoningMathEngine",
+      "intent": "arifmetika_algoritm",
+      "durationMs": 2
+    },
+    {
+      "id": "D4",
+      "category": "matematika_algoritmik",
+      "prompt": "Sonlar ketma-ketligini davom ettir: 2, 4, 6, 8, ... Keyingi son nima?",
+      "reply": "Mantiqiy ketma-ketlik yechimi:\nBu arifmetik progressiya bo'lib, har bir qadamda sonlarga 2 qo'shilib bormoqda.\nKeyingi son: 8 + 2 = 10.\nTo'g'ri javob: 10.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "SequenceReasoningEngine",
+      "intent": "ketma_ketlik_mantiq",
+      "durationMs": 0
+    },
+    {
+      "id": "D5",
+      "category": "matematika_algoritmik",
+      "prompt": "Ketma-ketlikdagi keyingi toq sonni top: 1, 3, 5, 7, ...?",
+      "reply": "Mantiqiy ketma-ketlik yechimi:\nBu arifmetik progressiya bo'lib, har bir qadamda sonlarga 2 qo'shilib bormoqda.\nKeyingi son: 7 + 2 = 9.\nTo'g'ri javob: 9.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "SequenceReasoningEngine",
+      "intent": "ketma_ketlik_mantiq",
+      "durationMs": 0
+    },
+    {
+      "id": "D6",
+      "category": "matematika_algoritmik",
+      "prompt": "15 ni 3 ga bo'lsak necha chiqadi?",
+      "reply": "Arifmetik hisob-kitob natijasi: 15 / 3 = 5. To'g'ri javob: 5.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ReasoningMathEngine",
+      "intent": "arifmetika_algoritm",
+      "durationMs": 1
+    },
+    {
+      "id": "D7",
+      "category": "matematika_algoritmik",
+      "prompt": "Bir dona daftar 2000 so'm bo'lsa, 3 ta daftar necha so'm bo'ladi?",
+      "reply": "Hisob-kitob: 1 dona daftar 2 000 so'm. 3 ta daftar: 3 * 2 000 = 6 000 so'm. To'g'ri javob: 6 000 so'm.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ReasoningMathEngine",
+      "intent": "arifmetika_algoritm",
+      "durationMs": 219
+    },
+    {
+      "id": "D8",
+      "category": "matematika_algoritmik",
+      "prompt": "100 dan 35 ni ayirsak necha qoladi?",
+      "reply": "Arifmetik hisob-kitob natijasi: 100 - 35 = 65. To'g'ri javob: 65.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ReasoningMathEngine",
+      "intent": "arifmetika_algoritm",
+      "durationMs": 0
+    },
+    {
+      "id": "E1",
+      "category": "kop_bosqichli",
+      "prompt": "Farhod do'konga bordi, 10 000 so'mga non va 15 000 so'mga sut oldi. Kassaga 50 000 so'm berdi. Unga qancha qaytim qaytarishadi?",
+      "reply": "Ko'p bosqichli hisob-kitob:\n1) Xaridlar summasi: 10 000 (non) + 15 000 (sut) = 25 000 so'm.\n2) Qaytim hisobi: 50 000 - 25 000 = 25 000 so'm.\nTo'g'ri javob: 25 000 so'm qaytim qaytarishadi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "MultiStepReasoningEngine",
+      "intent": "kop_bosqichli_mantiq",
+      "durationMs": 2
+    },
+    {
+      "id": "E2",
+      "category": "kop_bosqichli",
+      "prompt": "Birinchi kuni 5 sahifa, ikkinchi kuni birinchi kundan 3 sahifa ko'p kitob o'qidim. Ikki kunda jami necha sahifa o'qidim?",
+      "reply": "Bosqichma-bosqich hisob:\n1) 1-kuni: 5 sahifa o'qilgan.\n2) 2-kuni: 5 + 3 = 8 sahifa o'qilgan.\n3) Ikki kunda jami: 5 + 8 = 13 sahifa.\nTo'g'ri javob: Jami 13 sahifa o'qidim.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "MultiStepReasoningEngine",
+      "intent": "kop_bosqichli_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "E3",
+      "category": "kop_bosqichli",
+      "prompt": "Xonada 3 ta stul bor, har bir stulning 4 ta oyog'i bor. Xonadagi stullarning jami oyoqlari nechta?",
+      "reply": "Hisob-kitob: Har bir stulda 4 ta oyoq bor.\nJami 3 ta stulning oyoqlari: 3 * 4 = 12 ta.\nTo'g'ri javob: Jami 12 ta oyoq bor.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "MultiStepReasoningEngine",
+      "intent": "kop_bosqichli_mantiq",
+      "durationMs": 2
+    },
+    {
+      "id": "E4",
+      "category": "kop_bosqichli",
+      "prompt": "Avtobusda 15 kishi bor edi. Birinchi bekatda 5 kishi tushdi va 2 kishi chiqdi. Avtobusda nechta odam qoldi?",
+      "reply": "Bosqichma-bosqich hisob:\n1) Dastlab: 15 kishi.\n2) 5 kishi tushgach: 15 - 5 = 10 kishi qoldi.\n3) 2 kishi chiqqach: 10 + 2 = 12 kishi bo'ldi.\nTo'g'ri javob: Avtobusda 12 ta odam qoldi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "MultiStepReasoningEngine",
+      "intent": "kop_bosqichli_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "E5",
+      "category": "kop_bosqichli",
+      "prompt": "Agar soat 14:00 bo'lsa, 3 soatdan keyin soat necha bo'ladi?",
+      "reply": "Vaqt hisobi: Hozirgi soat 14:00 ga 3 soat qo'shilsa: 14 + 3 = 17:00 bo'ladi.\nTo'g'ri javob: Soat 17:00 (yoki 5) bo'ladi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "MultiStepReasoningEngine",
+      "intent": "kop_bosqichli_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "E6",
+      "category": "kop_bosqichli",
+      "prompt": "Kutubxonada 4 ta javon bor, har javonda 10 tadan kitob bor. Agar 5 ta kitob olinsa, nechta kitob qoladi?",
+      "reply": "Bosqichma-bosqich hisob:\n1) Jami dastlabki kitoblar: 4 * 10 = 40 ta.\n2) 5 ta olingach: 40 - 5 = 35 ta qoldi.\nTo'g'ri javob: 35 ta kitob qoladi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "MultiStepReasoningEngine",
+      "intent": "kop_bosqichli_mantiq",
+      "durationMs": 1
+    },
+    {
+      "id": "E7",
+      "category": "kop_bosqichli",
+      "prompt": "Doston dushanba kuni 2 km, seshanba kuni esa dushanbaga qaraganda 2 marta ko'p yugurdi. Ikki kunda jami necha km yugurdi?",
+      "reply": "Hisob-kitob:\n1) Dushanba kuni: 2 km.\n2) Seshanba kuni: 2 * 2 = 4 km.\n3) Jami ikki kunda: 2 + 4 = 6 km.\nTo'g'ri javob: Jami 6 km yugurdi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "MultiStepReasoningEngine",
+      "intent": "kop_bosqichli_mantiq",
+      "durationMs": 2
+    },
+    {
+      "id": "E8",
+      "category": "kop_bosqichli",
+      "prompt": "Hovuzda 8 ta baliq bor edi, ulardan 2 tasi cho'kib ketdi. Hovuzda nechta baliq qoldi?",
+      "reply": "Mantiqiy topishmoq va biologik tahlil:\nBaliqlar suvda yashaydi va ular suvda cho'kib ketmaydi!\nShuning uchun berilgan tuzoq shartga qaramay, hovuzda barcha 8 ta baliq o'z joyida qoladi.\nTo'g'ri javob: 8 ta baliq qoldi (baliqlar cho'kmaydi).",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "MultiStepReasoningEngine",
+      "intent": "kop_bosqichli_mantiq",
+      "durationMs": 0
+    },
+    {
+      "id": "F1",
+      "category": "xatolarni_aniqlash",
+      "prompt": "Birov aytdi: 2 qo'shuv 2 teng 5. Bu to'g'rimi yoki xatomi?",
+      "reply": "Arifmetik hisob-kitob natijasi: 2 + 2 = 4. To'g'ri javob: 4.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ReasoningMathEngine",
+      "intent": "arifmetika_algoritm",
+      "durationMs": 0
+    },
+    {
+      "id": "F2",
+      "category": "xatolarni_aniqlash",
+      "prompt": "Quyosh g'arbdan chiqib sharqqa botadi degan fikr to'g'rimi?",
+      "reply": "Ilmiy xatoni tuzatish: Bu fikr mutlaqo NOTO'G'RI va xatodir. Yer o'z o'qi atrofida g'arbdan sharqqa aylangani sababli, Quyosh har doim sharqdan chiqadi va g'arbga botadi. To'g'ri javob: Noto'g'ri, quyosh sharqdan chiqadi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ErrorDetectionEngine",
+      "intent": "xatolarni_tuzatish",
+      "durationMs": 1
+    },
+    {
+      "id": "F3",
+      "category": "xatolarni_aniqlash",
+      "prompt": "Savol: Fil chumolidan ancha kichkina. Bu jumlada qanday xatolik bor?",
+      "reply": "Mantiqiy xatoni tuzatish: Ushbu jumlada faktik xatolik bor. Aslida fil chumolidan ancha katta, chumoli esa fildan millionlab marta kichikdir. To'g'ri javob: Fikr xato, fil chumolidan ancha katta.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ErrorDetectionEngine",
+      "intent": "xatolarni_tuzatish",
+      "durationMs": 0
+    },
+    {
+      "id": "F4",
+      "category": "xatolarni_aniqlash",
+      "prompt": "Qishda havo juda issiq bo'ladi va hamma muzqaymoq yeydi. Ushbu fikrdagi xatoni ko'rsat.",
+      "reply": "Mantiqiy va tabiat qonuni xatosini tuzatish: Ushbu fikr xatodir. Qishda havo juda sovuq bo'ladi, qor yog'adi. Issiq havo va ommaviy muzqaymoq yeyish esa yoz fasliga xosdir. To'g'ri javob: Xato, qishda sovuq bo'ladi.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ErrorDetectionEngine",
+      "intent": "xatolarni_tuzatish",
+      "durationMs": 4
+    },
+    {
+      "id": "F5",
+      "category": "xatolarni_aniqlash",
+      "prompt": "1 kg temir 1 kg paxtadan og'irroq degan gap to'g'rimi?",
+      "reply": "Fizik mantiqiy xatoni tuzatish: Bu gap noto'g'ri. Har ikkala jismning massasi aynan bir xil, ya'ni 1 kilogrammga teng. Shuning uchun 1 kg temir va 1 kg paxtaning vazni tengdir. To'g'ri javob: Yo'q, ularning og'irligi teng (bir xil).",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ErrorDetectionEngine",
+      "intent": "xatolarni_tuzatish",
+      "durationMs": 0
+    },
+    {
+      "id": "F6",
+      "category": "xatolarni_aniqlash",
+      "prompt": "O'zbekiston okean sohilida joylashgan degan gap to'g'rimi?",
+      "reply": "Geografik xatoni tuzatish: Bu gap mutlaqo noto'g'ri. O'zbekiston dunyodagi ikki tomonlama quruqlik bilan o'ralgan (double landlocked) davlatlardan biri bo'lib, uning to'g'ridan-to'g'ri okean sohiliga chiqish yo'li yo'q. To'g'ri javob: Yo'q, noto'g'ri, O'zbekiston quruqlikda joylashgan.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "ErrorDetectionEngine",
+      "intent": "xatolarni_tuzatish",
+      "durationMs": 2
+    },
+    {
+      "id": "F7",
+      "category": "xatolarni_aniqlash",
+      "prompt": "Haftada 8 kun bor deb aytish to'g'rimi?",
+      "reply": "Xalqaro taqvim me'yoriga ko'ra bir haftada 7 (yetti) kun bor: dushanba, seshanba, chorshanba, payshanba, juma, shanba va yakshanba.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 0
+    },
+    {
+      "id": "F8",
+      "category": "xatolarni_aniqlash",
+      "prompt": "Toshkent Fransiyaning poytaxti degan da'vo to'g'rimi?",
+      "reply": "Geografik xatoni tuzatish: Ushbu da'vo mutlaqo noto'g'ri. Fransiyaning rasmiy poytaxti — Parij shahridir. Toshkent esa O'zbekistonning poytaxtidir.\nTo'g'ri javob: Yo'q, noto'g'ri, Fransiya poytaxti Parij.",
+      "isCorrect": true,
+      "isUnknown": false,
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "intent": "fundamental_bilim",
+      "durationMs": 0
+    }
+  ]
+}

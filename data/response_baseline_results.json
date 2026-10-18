@@ -1,0 +1,501 @@
+{
+  "evaluatedAt": "2026-10-17T19:08:39.909Z",
+  "overallTotal": 25,
+  "overallPassed": 25,
+  "overallPercentage": 100,
+  "groupStats": {
+    "1. Oddiy faktik savollar": {
+      "total": 3,
+      "passed": 3,
+      "totalMs": 50,
+      "scores": [
+        100,
+        100,
+        100
+      ]
+    },
+    "2. Oddiy matematika va mantiq": {
+      "total": 4,
+      "passed": 4,
+      "totalMs": 21,
+      "scores": [
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "3. Shartli va chalg'ituvchi savollar": {
+      "total": 3,
+      "passed": 3,
+      "totalMs": 6,
+      "scores": [
+        100,
+        100,
+        100
+      ]
+    },
+    "4. Noaniq savollar va aniqlashtirish": {
+      "total": 2,
+      "passed": 2,
+      "totalMs": 2,
+      "scores": [
+        100,
+        100
+      ]
+    },
+    "5. Ko'p bosqichli suhbat": {
+      "total": 2,
+      "passed": 2,
+      "totalMs": 0,
+      "scores": [
+        100,
+        100
+      ]
+    },
+    "6. Qisqartirish yoki tushuntirish": {
+      "total": 1,
+      "passed": 1,
+      "totalMs": 0,
+      "scores": [
+        100
+      ]
+    },
+    "7. Mavzuni almashtirish": {
+      "total": 1,
+      "passed": 1,
+      "totalMs": 0,
+      "scores": [
+        100
+      ]
+    },
+    "8. Noma'lum savollarga javob": {
+      "total": 2,
+      "passed": 2,
+      "totalMs": 38,
+      "scores": [
+        100,
+        100
+      ]
+    },
+    "9. Imlo, apostrof va sinonimlar": {
+      "total": 4,
+      "passed": 4,
+      "totalMs": 3,
+      "scores": [
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "10. Noto'g'ri taxminlarni fosh qilish": {
+      "total": 3,
+      "passed": 3,
+      "totalMs": 0,
+      "scores": [
+        100,
+        100,
+        100
+      ]
+    }
+  },
+  "results": [
+    {
+      "id": "G1_F1",
+      "group": "1. Oddiy faktik savollar",
+      "isMultiTurn": false,
+      "prompt": "O'zbekistonning poytaxti qaysi shahar?",
+      "reply": "O'zbekiston Respublikasining poytaxti (bosh shahri) — Toshkent shahridir. Toshkent Markaziy Osiyodagi eng yirik megapolis bo'lib, mamlakatning asosiy ma'muriy, iqtisodiy va madaniy markazi hisoblanadi.",
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "elapsedMs": 33,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G1_F2",
+      "group": "1. Oddiy faktik savollar",
+      "isMultiTurn": false,
+      "prompt": "Quyosh nima?",
+      "reply": "Quyosh — bu yulduz bo'lib, Quyosh tizimining markazida joylashgan, ulkan qizigan plazma shari.\n\nAsosiy vazifasi va mohiyati: Yer sayyorasini yorug'lik, issiqlik va fotosintez uchun zarur energiya bilan ta'minlash.\nUning tortishish kuchi barcha sayyoralarni o'z orbitasida ushlab turadi.",
+      "toolUsed": "ConceptDefinitionEngine",
+      "elapsedMs": 16,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G1_F3",
+      "group": "1. Oddiy faktik savollar",
+      "isMultiTurn": false,
+      "prompt": "Fotosintez jarayoni nima?",
+      "reply": "Fotosintez — bu biologik-kimyoviy jarayon bo'lib, yashil o'simliklar, suvo'tlar va ayrim bakteriyalarning xlorofill pigmenti yordamida Quyosh nuri energiyasini kimyoviy energiyaga aylantirishi.\n\nAsosiy vazifasi va mohiyati: organik moddalarni sintez qilish va atmosferaga kislorod ajratib chiqarish.\nFotosintez — Yerdagi hayotning davomiyligi va atmosferadagi kislorod muvozanatining kafolatidir.",
+      "toolUsed": "ConceptDefinitionEngine",
+      "elapsedMs": 1,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G2_M1",
+      "group": "2. Oddiy matematika va mantiq",
+      "isMultiTurn": false,
+      "prompt": "5 ta olma bor edi, 2 tasini yedim. Nechta qoldi?",
+      "reply": "Mantiqiy hisob-kitob:\n1) Dastlab 5 ta olma bor edi.\n2) Undan 2 tasi kamaygach: 5 - 2 = 3 ta qoldi.\nTo'g'ri javob: 3 ta olma qoldi.",
+      "toolUsed": "ReasoningMathEngine",
+      "elapsedMs": 1,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G2_M2",
+      "group": "2. Oddiy matematika va mantiq",
+      "isMultiTurn": false,
+      "prompt": "12 ni 4 ga ko'paytir",
+      "reply": "Arifmetik hisob-kitob natijasi: 12 * 4 = 48. To'g'ri javob: 48.",
+      "toolUsed": "ReasoningMathEngine",
+      "elapsedMs": 5,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G2_M3",
+      "group": "2. Oddiy matematika va mantiq",
+      "isMultiTurn": false,
+      "prompt": "Barcha insonlar nafas oladi. Ali — inson. Ali nafas oladimi?",
+      "reply": "Mantiqiy deduktiv xulosa (Sillogizm):\n1) Katta asos: Barcha insonlar nafas oladi (umumiy qoida).\n2) Kichik asos: Ali — bu inson.\nDemak, deduksiya qonuniga ko'ra: Ha, Ali ham albatta nafas oladi.\nTo'g'ri javob: Ha, Ali ham nafas oladi.",
+      "toolUsed": "DeductiveReasoningEngine",
+      "elapsedMs": 14,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G2_M4",
+      "group": "2. Oddiy matematika va mantiq",
+      "isMultiTurn": false,
+      "prompt": "Ketma-ketlik: 3, 6, 12, 24. Keyingi son nima?",
+      "reply": "Mantiqiy ketma-ketlik yechimi:\nBu geometrik progressiya bo'lib, har bir son oldingisidan 2 barobar ortib bormoqda (3 * 2 = 6, 6 * 2 = 12, 12 * 2 = 24).\nKeyingi son: 24 * 2 = 48.\nTo'g'ri javob: 48.",
+      "toolUsed": "SequenceReasoningEngine",
+      "elapsedMs": 1,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G3_C1",
+      "group": "3. Shartli va chalg'ituvchi savollar",
+      "isMultiTurn": false,
+      "prompt": "Mushuk ucha oladimi?",
+      "reply": "Yo'q, mushuk ucha olmaydi. Mushuk quruqlikda yashovchi hayvon bo'lib, uning tanasida parvoz qilish uchun qanotlar yoki aerodinamik a'zolar mavjud emas.",
+      "toolUsed": "CapabilityReasoningEngine",
+      "elapsedMs": 4,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G3_C2",
+      "group": "3. Shartli va chalg'ituvchi savollar",
+      "isMultiTurn": false,
+      "prompt": "Qishda havo sovuq bo'lsa, nima kiyish kerak?",
+      "reply": "Qishda havo sovuq bo'lganda, shamol va sovuqdan himoyalanish uchun issiq va qalin kiyimlar kiyish zarur:\n1. Issiq qishki kurtka yoki palto;\n2. Bosh kiyim (shapka) va bo'yinbog' (sharf);\n3. Issiq qo'lqop va qalin qishki poyabzal (etik);\n4. Qatlam-qatlam kiyinish (termal ich kiyim, sviter) tanani iliq saqlashga eng yaxshi yordam beradi.",
+      "toolUsed": "InstructionAdviceEngine",
+      "elapsedMs": 2,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G3_C3",
+      "group": "3. Shartli va chalg'ituvchi savollar",
+      "isMultiTurn": false,
+      "prompt": "Tosh suvda suza oladimi?",
+      "reply": "Yo'q, tosh suvda suza olmaydi. Uning zichligi suvning zichligidan ancha katta bo'lganligi sababli, u suvga tashlanganda darhol tubiga cho'kadi.",
+      "toolUsed": "CapabilityReasoningEngine",
+      "elapsedMs": 0,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G4_A1",
+      "group": "4. Noaniq savollar va aniqlashtirish",
+      "isMultiTurn": false,
+      "prompt": "U qachon keladi?",
+      "reply": "Kechirasiz, savolingizda 'u' deb kimni nazarda tutayotganingiz yoki qaysi joy haqida so'rayotganingiz ko'rsatilmagan. Iltimos, aynan kim yoki nima haqida so'rayotganingizni aniqlashtirib bera olasizmi?",
+      "toolUsed": "AmbiguityClarifier",
+      "elapsedMs": 1,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G4_A2",
+      "group": "4. Noaniq savollar va aniqlashtirish",
+      "isMultiTurn": false,
+      "prompt": "Menga uning narxini ayt",
+      "reply": "Qaysi mahsulot, tovar yoki xizmatning narxini bilmoqchisiz? Iltimos, mahsulot nomini aniq aytsangiz, ma'lumot berishga harakat qilaman.",
+      "toolUsed": "AmbiguityClarifier",
+      "elapsedMs": 1,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G5_MT1",
+      "group": "5. Ko'p bosqichli suhbat",
+      "isMultiTurn": true,
+      "passed": true,
+      "score": 100,
+      "turnDetails": [
+        {
+          "turn": 1,
+          "prompt": "Mening ismim Bobur va men shifokorman.",
+          "reply": "Tanishganimdan juda xursandman, Bobur! Kasbingiz shifokor ekanligini ham xotiramga saqlab qo'ydim ✨",
+          "toolUsed": "CognitiveMemory",
+          "elapsed": 2,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        },
+        {
+          "turn": 2,
+          "prompt": "Mening kasbim nima?",
+          "reply": "Sizning kasbingiz — Shifokor. Buni xotiramda saqlab qolganman ✨",
+          "toolUsed": "UserProfileEngine",
+          "elapsed": 1,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        },
+        {
+          "turn": 3,
+          "prompt": "Mening ismim nima edi?",
+          "reply": "Sizning ismingiz — Bobur. Buni avvalgi suhbatimizda aytgan edingiz 😊",
+          "toolUsed": "UserProfileEngine",
+          "elapsed": 0,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "G5_MT2",
+      "group": "5. Ko'p bosqichli suhbat",
+      "isMultiTurn": true,
+      "passed": true,
+      "score": 100,
+      "turnDetails": [
+        {
+          "turn": 1,
+          "prompt": "Jasur bu kompaniya rahbari",
+          "reply": "Ajoyib! Buni xotiramga saqlab qo'ydim: jasur — kompaniya rahbari ✨",
+          "toolUsed": "CognitiveMemory",
+          "elapsed": 2,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        },
+        {
+          "turn": 2,
+          "prompt": "Jasur kim?",
+          "reply": "Jasur — bu kompaniya rahbari hisoblanadi.",
+          "toolUsed": "AssociativeMemory",
+          "elapsed": 3,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "G6_S1",
+      "group": "6. Qisqartirish yoki tushuntirish",
+      "isMultiTurn": true,
+      "passed": true,
+      "score": 100,
+      "turnDetails": [
+        {
+          "turn": 1,
+          "prompt": "Oy nima?",
+          "reply": "Oy — bu tabiiy yo'ldosh bo'lib, Yer sayyorasining yagona tabiiy yo'ldoshi bo'lib, o'zidan yorug'lik chiqarmaydi, balki Quyosh nurini qaytaradi.\n\nAsosiy vazifasi va mohiyati: Yerning aylanish o'qini barqarorlashtirish va okeanlarda ko'tarilish-qaytish (suv toshqini) hodisalarini hosil qilish.\nInsoniyat qadami yetgan yagona boshqa osmon jismi hisoblanadi.",
+          "toolUsed": "ConceptDefinitionEngine",
+          "elapsed": 1,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        },
+        {
+          "turn": 2,
+          "prompt": "Buni ikki jumlada qisqartir",
+          "reply": "Qisqacha xulosa (ikki jumlada):\n1) Oy — bu tabiiy yo'ldosh bo'lib, Yer sayyorasining yagona tabiiy yo'ldoshi bo'lib, o'zidan yorug'lik chiqarmaydi, balki Quyosh nurini qaytaradi.\n2) Asosiy vazifasi va mohiyati: Yerning aylanish o'qini barqarorlashtirish va okeanlarda ko'tarilish-qaytish (suv toshqini) hodisalarini hosil qilish.",
+          "toolUsed": "ContextFollowupEngine",
+          "elapsed": 2,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "G7_TS1",
+      "group": "7. Mavzuni almashtirish",
+      "isMultiTurn": true,
+      "passed": true,
+      "score": 100,
+      "turnDetails": [
+        {
+          "turn": 1,
+          "prompt": "JavaScript dasturlash tili nima?",
+          "reply": "Javascript dasturlash tili — bu yuqori darajali dasturlash tili bo'lib, veb-sahifalarga dinamiklik va interaktivlik kiritish, shuningdek serverda (Node.js) ishlashga mo'ljallangan keng tarqalgan zamonaviy dasturlash tili.\n\nAsosiy vazifasi va mohiyati: veb-saytlar, mobil ilovalar va server dasturlarini ishlab chiqish.\nJavaScript 1995 yilda Brendan Eich tomonidan ishlab chiqilgan bo'lib, zamonaviy dasturlash sohasining asosiy texnologiyalaridan biridir.",
+          "toolUsed": "ConceptDefinitionEngine",
+          "elapsed": 1,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        },
+        {
+          "turn": 2,
+          "prompt": "Endi mavzuni butunlay o'zgartiramiz. Somsa qanday taom?",
+          "reply": "Somsa — bu o'zbek milliy taomi, xamirli pishiriq bo'lib, mayin xamir ichiga maydalangan go'sht, dumba yog'i, piyoz va xushbo'y ziravorlar solib, tandirda yoki duxovkada pishiriladigan to'yimli an'anaviy taom.\n\nAsosiy vazifasi va mohiyati: to'yimli, xushxo'r va lazzatli taomlanish.\nSomsa tandir somsa, qatlama somsa, ko'k somsa va varaqi somsa kabi ko'plab turlarga ega.",
+          "toolUsed": "ConceptDefinitionEngine",
+          "elapsed": 1,
+          "evalRes": {
+            "score": 100,
+            "passed": true,
+            "failureReasons": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "G8_U1",
+      "group": "8. Noma'lum savollarga javob",
+      "isMultiTurn": false,
+      "prompt": "2099 yilda kashf etilgan gipotetik zarracha kodi qanday?",
+      "reply": "Ochiq aytganda, ushbu mavzu bo'yicha menga bilim o'rgatilmagan va xotiramda aniq faktlar mavjud emas. Biroq boshqa mavzudagi savollaringiz bo'lsa, bajonidil yordam berishga tayyorman!",
+      "toolUsed": "LocalKnowledgeEngine",
+      "elapsedMs": 37,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G8_U2",
+      "group": "8. Noma'lum savollarga javob",
+      "isMultiTurn": false,
+      "prompt": "Marsdagi 5-qavatli turar-joy binosining manzili nima?",
+      "reply": "Mavjud ilmiy va astronomik faktlarga ko'ra, Mars sayyorasida insoniyat tomonidan hali birorta ham shahar yoki doimiy bino qurilmagan, u yerda bunday manzil va shahar yo'q. Marsda hozircha faqat ilmiy roverlar (tadqiqot apparatlari) harakatlanmoqda. Shuning uchun savoldagi bino yoki manzil mavjud emas.",
+      "toolUsed": "FalsePremiseGuard",
+      "elapsedMs": 1,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G9_O1",
+      "group": "9. Imlo, apostrof va sinonimlar",
+      "isMultiTurn": false,
+      "prompt": "oʻzbekiston poytaxti qayer?",
+      "reply": "O'zbekiston Respublikasining poytaxti (bosh shahri) — Toshkent shahridir. Toshkent Markaziy Osiyodagi eng yirik megapolis bo'lib, mamlakatning asosiy ma'muriy, iqtisodiy va madaniy markazi hisoblanadi.",
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "elapsedMs": 1,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G9_O2",
+      "group": "9. Imlo, apostrof va sinonimlar",
+      "isMultiTurn": false,
+      "prompt": "O'zbekistonning bosh shahri qaysi?",
+      "reply": "O'zbekiston Respublikasining poytaxti (bosh shahri) — Toshkent shahridir. Toshkent Markaziy Osiyodagi eng yirik megapolis bo'lib, mamlakatning asosiy ma'muriy, iqtisodiy va madaniy markazi hisoblanadi.",
+      "toolUsed": "FundamentalKnowledgeEngine",
+      "elapsedMs": 0,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G9_O3",
+      "group": "9. Imlo, apostrof va sinonimlar",
+      "isMultiTurn": false,
+      "prompt": "men hursandman",
+      "reply": "Ko'tarinki kayfiyatingizdan men ham chin dildan xursandman! Bunday ajoyib va ijobiy energiya sizni aslo tark etmasin! Bugun yana nimalar ustida ishlaymiz?",
+      "toolUsed": "EmpathyCareEngine",
+      "elapsedMs": 2,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G9_O4",
+      "group": "9. Imlo, apostrof va sinonimlar",
+      "isMultiTurn": false,
+      "prompt": "juda toliqdim",
+      "reply": "Juda ko'p mehnat qilib toliqibsiz. Hozir barcha ishlarni bir chetga surib, xotirjam hordiq chiqarishingizni tavsiya qilaman. O'zingizni ehtiyot qiling!",
+      "toolUsed": "EmpathyCareEngine",
+      "elapsedMs": 0,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G10_FP1",
+      "group": "10. Noto'g'ri taxminlarni fosh qilish",
+      "isMultiTurn": false,
+      "prompt": "Marsda 2024 yilda qurilgan shahar nomi nima?",
+      "reply": "Mavjud ilmiy va astronomik faktlarga ko'ra, Mars sayyorasida insoniyat tomonidan hali birorta ham shahar yoki doimiy bino qurilmagan, u yerda bunday manzil va shahar yo'q. Marsda hozircha faqat ilmiy roverlar (tadqiqot apparatlari) harakatlanmoqda. Shuning uchun savoldagi bino yoki manzil mavjud emas.",
+      "toolUsed": "FalsePremiseGuard",
+      "elapsedMs": 0,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G10_FP2",
+      "group": "10. Noto'g'ri taxminlarni fosh qilish",
+      "isMultiTurn": false,
+      "prompt": "Qora tuynukning ichidagi haroratni laboratoriyada o'lchagan olim kim?",
+      "reply": "Qora tuynukning ichidagi haroratni laboratoriyada o'lchash fizik jihatdan mutlaqo imkonsizdir. Qora tuynukning tortishish kuchi shunchalik kuchliki, uning 'voqealar gorizonti' ichidan yorug'lik ham chiqib keta olmaydi. Hech qanday asbob yoki olim uning ichiga kirib o'lchov olmagan va ilmiy jihatdan bu mumkin emas (bunday olim yo'q).",
+      "toolUsed": "FalsePremiseGuard",
+      "elapsedMs": 0,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    },
+    {
+      "id": "G10_FP3",
+      "group": "10. Noto'g'ri taxminlarni fosh qilish",
+      "isMultiTurn": false,
+      "prompt": "Toshkent dengiz bo'yida joylashganmi?",
+      "reply": "Yo'q, Toshkent dengiz bo'yida joylashgan emas. O'zbekiston dunyodagi ochiq dengizga chiqish uchun kamida ikkita davlat hududidan o'tishi kerak bo'lgan (ikki karra quruqlik bilan o'ralgan — doubly landlocked) davlatlardan biridir.",
+      "toolUsed": "FalsePremiseGuard",
+      "elapsedMs": 0,
+      "passed": true,
+      "score": 100,
+      "reasons": []
+    }
+  ]
+}

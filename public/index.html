@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural LLM Studio - AI Enterprise Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-badge">AI</div>
+        <div class="brand-text">
+          <span class="brand-title">Neural Studio</span>
+          <span class="brand-env">Enterprise v2.5</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">BOSHQARUV</div>
+        <button class="nav-item active" data-tab="tab-chat">
+          <span class="nav-icon">💬</span>
+          <span class="nav-label">Chat & Agent</span>
+          <span class="nav-pill">Voice</span>
+        </button>
+        <button class="nav-item" data-tab="tab-memory">
+          <span class="nav-icon">🧬</span>
+          <span class="nav-label">Kognitiv Xotira</span>
+          <span class="nav-badge" id="nav-facts-count">5</span>
+        </button>
+        <button class="nav-item" data-tab="tab-rag">
+          <span class="nav-icon">📚</span>
+          <span class="nav-label">RAG Kutubxona</span>
+          <span class="nav-badge" id="nav-docs-count">2</span>
+        </button>
+
+        <div class="nav-section-title">AI LABORATORIYA</div>
+        <button class="nav-item" data-tab="tab-attention">
+          <span class="nav-icon">🔥</span>
+          <span class="nav-label">Multi-Head Attention</span>
+          <span class="nav-pill">4 Heads</span>
+        </button>
+        <button class="nav-item" data-tab="tab-neural">
+          <span class="nav-icon">⚡</span>
+          <span class="nav-label">Neyron Tarmoq & Sinaps</span>
+        </button>
+        <button class="nav-item" data-tab="tab-llm">
+          <span class="nav-icon">✨</span>
+          <span class="nav-label">Transformer Mini-LLM</span>
+        </button>
+        <button class="nav-item" data-tab="tab-embeddings">
+          <span class="nav-icon">🌐</span>
+          <span class="nav-label">Word Embeddings</span>
+        </button>
+
+        <div class="nav-section-title">DASTURLASH</div>
+        <button class="nav-item" data-tab="tab-code">
+          <span class="nav-icon">💻</span>
+          <span class="nav-label">Code Studio & Sandbox</span>
+          <span class="nav-pill">VM Run</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile-widget">
+          <div class="user-avatar" id="sidebar-user-avatar">👤</div>
+          <div class="user-info">
+            <span class="user-name" id="sidebar-user-name">Foydalanuvchi</span>
+            <span class="user-role" id="sidebar-user-role">Kiritilmagan</span>
+          </div>
+        </div>
+        <div class="train-device-box" style="margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 11px; color: var(--text-muted); font-weight: 500;">Apparat tezlatgichi:</span>
+            <span id="hardware-badge" style="font-size: 10px; background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 2px 6px; border-radius: 4px;">GPU faol</span>
+          </div>
+          <select id="train-device-select" class="form-control" style="font-size: 11px; padding: 5px 8px; border-radius: 6px; width: 100%; background: var(--bg-card, #1e222d); color: var(--text-main, #fff); border: 1px solid var(--border-color, #2d3748); cursor: pointer;">
+            <option value="gpu">⚡ GPU (NVIDIA / WebGL)</option>
+            <option value="cpu">🖥️ CPU (Ultra-Fast Sparse)</option>
+            <option value="auto" selected>🎯 Avtomatik (Eng kuchli)</option>
+          </select>
+        </div>
+        <button id="quick-train-btn" class="btn btn-secondary btn-sm btn-block">
+          ⚡ Modelni O'qitish
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN VIEWPORT -->
+    <div class="admin-main">
+      <header class="admin-header">
+        <div class="header-left">
+          <button class="mobile-toggle-btn" id="mobile-toggle-btn" aria-label="Menyu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12h18M3 6h18M3 18h18"/>
+            </svg>
+          </button>
+          <div class="breadcrumb">
+            <span class="breadcrumb-root">Konsol</span>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-active" id="current-page-title">Chat & Agent Engine</span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="system-status-indicator">
+            <span class="status-indicator-dot"></span>
+            <span id="model-stats">121 Kirish • 16 Yashirin • 4 Chiqish</span>
+          </div>
+          <button id="export-chat-btn" class="header-action-btn" title="Suhbatni Markdown formatida yuklab olish">📥 Eksport (.md)</button>
+        </div>
+      </header>
+
+      <main class="page-container">
+
+        <!-- 1. CHAT SAHIFASI -->
+        <section id="tab-chat" class="page-view active">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Kognitiv & Hissiy Chatbot (Humanoid Conversational AI)</h2>
+              <p class="page-desc">Gumanoid muloqot: Emotion & Sentiment + Transformer Attention + RAG Kutubxona + Ovozli interfeys</p>
+            </div>
+            <div class="header-tags">
+              <button id="voice-tts-toggle" class="tag-pill btn-toggle active">🔊 Ovozli Javob: Yoqiq</button>
+              <span class="tag-pill">4-Head Attention</span>
+              <span class="tag-pill">One-Shot Hebbian</span>
+            </div>
+          </div>
+
+          <div class="chat-workspace">
+            <div class="chat-main-card">
+              <div class="chat-messages" id="chat-messages">
+                <div class="message msg-bot">
+                  <div class="msg-avatar">AI</div>
+                  <div class="msg-bubble">
+                    <p class="msg-greeting">Assalomu alaykum! Men <strong>Neural Studio</strong> gumanoid kognitiv intellekt tizimiman.</p>
+                    <p>Menda <strong>Hissiy Intellekt (Emotion & Empathy)</strong>, <strong>RAG Hujjatlar Kutubxonasi</strong> va <strong>Transformer Attention</strong> generatori mavjud. Qanday yordam bera olaman?</p>
+                    <div class="quick-prompts">
+                      <button class="chip-btn" data-prompt="Bugun juda charchadim, boshim og'riyapti">😔 Charchoqni bildirish</button>
+                      <button class="chip-btn" data-prompt="Ajoyib natija bo'ldi, juda xursandman!">😊 Quvonchni ulashish</button>
+                      <button class="chip-btn" data-prompt="Node.js arxitekturasi haqida nima bilasan?">📚 Hujjatdan so'rash</button>
+                      <button class="chip-btn" data-prompt="125 * 8 necha bo'ladi?">🧮 Hisob-kitob</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-input-wrapper">
+                <div class="chat-input-bar">
+                  <button id="chat-file-btn" class="btn btn-secondary btn-icon" title="Hujjat yuklash (.txt, .md, .pdf, .json, .csv)">📎</button>
+                  <input type="file" id="chat-file-input" style="display:none;" accept=".txt,.md,.markdown,.json,.csv,.js,.py,.html,.log,.pdf">
+                  <button id="voice-stt-btn" class="btn btn-secondary btn-icon" title="Ovoz orqali gapirish">🎙️</button>
+                  <input type="text" id="chat-input" placeholder="Xabaringizni yozing yoki mikrofondan gapiring..." autocomplete="off">
+                  <button id="chat-send-btn" class="btn btn-primary">Yuborish ➤</button>
+                </div>
+                <div class="chat-input-hints">
+                  <span id="stt-status">Enter — yuborish • 🎙️ — ovozli • 📎 — fayl yuklash</span>
+                  <span>Fakt o'rgatish: "[Mavzu] bu [Mazmuni]"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. KOGNITIV XOTIRA SAHIFASI -->
+        <section id="tab-memory" class="page-view">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Kognitiv Xotira va Dinamik Bilimlar Grafi</h2>
+              <p class="page-desc">Suhbat davomida on-the-fly o'zlashtirilgan shaxsiy profil va doimiy assotsiativ faktlar ombori</p>
+            </div>
+          </div>
+
+          <div class="dashboard-grid-2">
+            <div class="admin-card">
+              <h3 class="card-heading">Foydalanuvchi Profili (Entity Store)</h3>
+              <p class="card-subheading">Bot siz haqingizda eslab qolgan shaxsiy xususiyatlar:</p>
+
+              <div class="profile-spec-list">
+                <div class="spec-item">
+                  <span class="spec-label">Ism:</span>
+                  <strong class="spec-value" id="prof-name">Hali aytilmadi</strong>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Kasb / Mutaxassislik:</span>
+                  <span class="spec-value" id="prof-profession">Hali aytilmadi</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Qiziqishlar:</span>
+                  <div class="tag-cloud" id="prof-interests">
+                    <span style="color: var(--text-muted); font-size: 12px;">Hali aniqlanmagan</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-divider"></div>
+
+              <h3 class="card-heading">Yangi Fakt O'rgatish (Hebbian Learning)</h3>
+              <p class="card-subheading">Modelni qayta o'qitmasdan turib bilimlarni on-the-fly kengaytiring:</p>
+
+              <div class="form-field">
+                <label>Mavzu (Subject):</label>
+                <input type="text" id="learn-subject" placeholder="Masalan: Kubernetes, Rust, GraphQL" class="admin-input">
+              </div>
+              <div class="form-field">
+                <label>Mazmuni (Object):</label>
+                <textarea id="learn-object" rows="3" placeholder="Masalan: dasturlarni bulutda orkestratsiya qiluvchi tizim" class="admin-textarea"></textarea>
+              </div>
+              <button id="learn-fact-btn" class="btn btn-primary btn-block">Xotiraga Saqlash 🧠</button>
+            </div>
+
+            <div class="admin-card">
+              <div class="card-head-row">
+                <div>
+                  <h3 class="card-heading">Dinamik Faktlar Grafi</h3>
+                  <p class="card-subheading">Xotiradagi jami faktlar: <strong id="facts-count">0</strong> ta</p>
+                </div>
+                <span class="badge-status">On-the-fly Graph</span>
+              </div>
+
+              <div class="facts-scroll-area" id="facts-list-container"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. RAG HUJJATLAR KUTUBXONASI SAHIFASI -->
+        <section id="tab-rag" class="page-view">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">RAG Hujjatlar Kutubxonasi (Semantic Knowledge Ingestion)</h2>
+              <p class="page-desc">Katta matn, kitob yoki kod qo'llanmalarini yuklang. Tizim ularni vektorlashtiradi va aniq faktlar bilan javob beradi.</p>
+            </div>
+          </div>
+
+          <div class="dashboard-grid-2">
+            <!-- Hujjat qo'shish -->
+            <div class="admin-card">
+              <h3 class="card-heading">Yangi Hujjat Qo'shish & Indekslash</h3>
+              <p class="card-subheading">Istalgan hajmdagi faylni sudrab tashlang yoki tanlang. Tizim uni avtomatik vektorlashtiradi:</p>
+
+              <!-- Drag & Drop File Zone -->
+              <div class="rag-dropzone" id="rag-dropzone">
+                <div class="dropzone-icon">📁</div>
+                <div class="dropzone-text">Faylni bu yerga sudrab tashlang yoki <span class="dropzone-link">tanlang</span></div>
+                <div class="dropzone-hint">.txt, .md, .json, .csv, .pdf (istalgan hajmda)</div>
+                <input type="file" id="rag-file-picker" style="display:none;" accept=".txt,.md,.markdown,.json,.csv,.js,.py,.html,.log,.pdf">
+              </div>
+
+              <div class="form-field">
+                <label>Hujjat nomi:</label>
+                <input type="text" id="rag-doc-title" placeholder="Masalan: JavaScript To'liq Qo'llanma" class="admin-input">
+              </div>
+              <div class="form-field">
+                <label>Toifasi:</label>
+                <input type="text" id="rag-doc-cat" value="hujjat" class="admin-input">
+              </div>
+              <div class="form-field">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 4px;">
+                  <label style="margin-bottom:0;">Hujjat matni (yoki nusxasi):</label>
+                  <span id="rag-content-stats" style="font-size:11px; color:var(--slate-500);">0 belgi</span>
+                </div>
+                <textarea id="rag-doc-content" rows="6" placeholder="Hujjat matnini bu yerga joylashtiring yoki fayl yuklang..." class="admin-textarea"></textarea>
+              </div>
+              <button id="rag-upload-btn" class="btn btn-primary btn-block">Indekslash va Saqlash 📚</button>
+            </div>
+
+            <!-- Hujjatlar ro'yxati va Semantik qidiruv sinovi -->
+            <div class="admin-card">
+              <div class="card-head-row">
+                <h3 class="card-heading">Indekslangan Hujjatlar (<span id="rag-docs-total">0</span>)</h3>
+                <span class="badge-status">Vector Index</span>
+              </div>
+
+              <div class="input-action-bar">
+                <input type="text" id="rag-query-input" placeholder="Hujjatlar bo'yicha savol bering..." class="admin-input">
+                <button id="rag-query-btn" class="btn btn-primary">Qidirish 🔍</button>
+              </div>
+
+              <div id="rag-query-result" style="margin-bottom: 14px;"></div>
+
+              <div class="facts-scroll-area" id="rag-docs-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. MULTI-HEAD ATTENTION SAHIFASI -->
+        <section id="tab-attention" class="page-view">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">4-Head Multi-Head Attention & Positional Encoding</h2>
+              <p class="page-desc">Transformer arxitekturasi: har bir bosh (Head) so'zlararo sintaktik, semantik va hissiy aloqalarni o'rganadi</p>
+            </div>
+            <div class="code-pill">MultiHead(Q,K,V) = Concat(head₁..head₄)·Wᴼ</div>
+          </div>
+
+          <div class="admin-card">
+            <div class="input-action-bar">
+              <input type="text" id="attention-input" value="Sun'iy intellekt dasturlash kelajagini tubdan o'zgartiradi" class="admin-input" placeholder="Jumla kiriting...">
+              <button id="attention-btn" class="btn btn-primary">Hisoblash ⚡</button>
+            </div>
+
+            <!-- Head Selector Tabs -->
+            <div class="head-tabs-bar">
+              <button class="head-btn active" data-head="avg">Konsensus (O'rtacha)</button>
+              <button class="head-btn" data-head="1">Head 1: Sintaksis</button>
+              <button class="head-btn" data-head="2">Head 2: Semantika</button>
+              <button class="head-btn" data-head="3">Head 3: Hissiyot</button>
+              <button class="head-btn" data-head="4">Head 4: Uzoq Kontekst</button>
+            </div>
+
+            <div class="attention-layout-grid">
+              <div class="heatmap-panel">
+                <div class="table-container">
+                  <table class="saas-table" id="attention-table"></table>
+                </div>
+              </div>
+
+              <div class="pairs-panel">
+                <h4 class="sub-panel-title">Eng Kuchli Bog'lanishlar</h4>
+                <div class="pairs-scroll" id="attention-pairs"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. CODE STUDIO & SANDBOX SAHIFASI -->
+        <section id="tab-code" class="page-view">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Code Studio & Izolyatsiyalangan Sandbox Runner</h2>
+              <p class="page-desc">Kodni xavfsiz VM muhitida yurgizish (Run), natijalarni ko'rish va avtomatik Self-Healing tuzatish</p>
+            </div>
+          </div>
+
+          <div class="dashboard-grid-2">
+            <div class="admin-card">
+              <div class="card-head-row">
+                <h3 class="card-heading">Dasturlash Muharriri (JavaScript)</h3>
+                <div class="code-actions-row">
+                  <button id="code-snippet-server" class="btn btn-secondary btn-xs">Server</button>
+                  <button id="code-snippet-search" class="btn btn-secondary btn-xs">Search</button>
+                  <button id="code-snippet-neuron" class="btn btn-secondary btn-xs">Sigmoid</button>
+                </div>
+              </div>
+
+              <textarea id="code-input" class="editor-textarea" rows="12" spellcheck="false">// JavaScript kodini yozing va "Yurgizish" tugmasini bosing:
+function testMath(a, b) {
+  console.log("Hisoblash boshlandi...");
+  const yigindi = a + b;
+  console.log("Natija:", yigindi);
+  return yigindi;
+}
+testMath(15, 25);</textarea>
+
+              <div class="btn-group-row" style="margin-top: 12px;">
+                <button id="run-sandbox-btn" class="btn btn-primary">Yurgizish ▶</button>
+                <button id="analyze-code-btn" class="btn btn-secondary">Statik Tekshirish 🛠️</button>
+                <button id="heal-code-btn" class="btn btn-secondary" style="display: none;">Avto-Tuzatish 🩹</button>
+              </div>
+            </div>
+
+            <!-- Terminal Console Output -->
+            <div class="admin-card">
+              <div class="card-head-row">
+                <h3 class="card-heading">Terminal & Natijalar (Console Output)</h3>
+                <span class="badge-status" id="sandbox-status-badge">Kutilmoqda</span>
+              </div>
+              <div class="terminal-output-window" id="terminal-console">
+                <span class="terminal-muted">// Kod natijalari bu yerda chiqadi...</span>
+              </div>
+
+              <div class="analysis-results-box" id="code-analysis-results" style="margin-top: 14px; min-height: 100px;">
+                <div class="empty-state-notice">Statik tahlil uchun "Statik Tekshirish" tugmasini bosing...</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. NEYRON TARMOQ SAHIFASI -->
+        <section id="tab-neural" class="page-view">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Neyron Tarmoq & Morfologik Lemmatizator</h2>
+              <p class="page-desc">Feedforward signal oqimi, sinaps og'irliklari va o'zbek tili agglyutinativ affikslari</p>
+            </div>
+          </div>
+
+          <div class="dashboard-grid-2">
+            <div class="admin-card">
+              <h3 class="card-heading">Matn Tahlili (Classifier)</h3>
+              <p class="card-subheading">Matn kiriting. Tizim avval o'zakni (lemma) ajratadi, so'ngra neyron tarmoqdan o'tkazadi:</p>
+
+              <div class="input-action-bar">
+                <input type="text" id="neural-input" value="Bugun yangi JavaScript dasturini yozdim" class="admin-input">
+                <button id="neural-btn" class="btn btn-primary">Tahlil ⚡</button>
+              </div>
+
+              <div class="lemmas-panel">
+                <span class="lemmas-label">Ajratilgan o'zaklar (Lemmatizatsiya):</span>
+                <div class="tag-cloud" id="lemmas-container"></div>
+              </div>
+
+              <div class="prediction-saas-box">
+                <div class="pred-left">
+                  <span class="pred-label">Neyron Tarmoq Niyati:</span>
+                  <strong class="pred-category" id="pred-category">-</strong>
+                </div>
+                <div class="pred-right">
+                  <span class="pred-confidence" id="pred-confidence">0%</span>
+                </div>
+              </div>
+
+              <div class="prob-bars-list" id="prob-bars-container"></div>
+            </div>
+
+            <div class="admin-card">
+              <div class="card-head-row">
+                <h3 class="card-heading">Jonli Sinapslar Animatsiyasi</h3>
+                <span class="badge-status">Feedforward Pass</span>
+              </div>
+              <div class="canvas-box">
+                <canvas id="neuralCanvas" width="600" height="320"></canvas>
+              </div>
+              <div class="canvas-legend-row">
+                <span><i class="dot dot-input"></i> Kirish</span>
+                <span><i class="dot dot-hidden"></i> Yashirin</span>
+                <span><i class="dot dot-output"></i> Chiqish</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. TRANSFORMER MINI-LLM SAHIFASI -->
+        <section id="tab-llm" class="page-view">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Transformer Attention Mini-LLM Generator</h2>
+              <p class="page-desc">Attention-Weighted Next-Token Predictor: butun gapdagi e'tibor ballari va Word Embeddings asosida</p>
+            </div>
+          </div>
+
+          <div class="dashboard-grid-2">
+            <div class="admin-card">
+              <h3 class="card-heading">Generatsiya Parametrlari</h3>
+
+              <div class="form-field">
+                <label>Boshlang'ich so'z (Prompt):</label>
+                <input type="text" id="prompt-input" value="Dasturlash" class="admin-input">
+              </div>
+
+              <div class="form-field">
+                <div class="label-row">
+                  <label>Harorat (Temperature): <strong id="temp-val">0.8</strong></label>
+                  <small class="muted-hint">Past = Aniq • Yuqori = Ijodiy</small>
+                </div>
+                <input type="range" id="temp-slider" min="0.2" max="1.5" step="0.1" value="0.8" class="admin-slider">
+              </div>
+
+              <div class="form-field">
+                <div class="label-row">
+                  <label>Maksimal tokenlar: <strong id="tokens-val">25</strong></label>
+                </div>
+                <input type="range" id="tokens-slider" min="5" max="50" step="5" value="25" class="admin-slider">
+              </div>
+
+              <button id="generate-btn" class="btn btn-primary btn-block">Yangi Matn Yaratish ✨</button>
+            </div>
+
+            <div class="admin-card">
+              <h3 class="card-heading">Model Natijasi</h3>
+              <div class="llm-output-box" id="generated-output">
+                "Yangi Matn Yaratish" tugmasini bosing...
+              </div>
+              <div class="llm-meta-info" id="generation-meta">
+                Model: Transformer Attention-Weighted Autoregressive Generator
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. WORD EMBEDDINGS SAHIFASI -->
+        <section id="tab-embeddings" class="page-view">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">Word Embeddings & Semantik Fazoviy Masofa</h2>
+              <p class="page-desc">Ko'p o'lchamli vektor fazosida so'zlarning burchak o'xshashligi (Cosine Similarity)</p>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <div class="input-action-bar" style="max-width: 540px;">
+              <input type="text" id="embedding-input" value="dasturlash" class="admin-input" placeholder="So'z kiriting...">
+              <button id="embedding-btn" class="btn btn-primary">Qidirish 🔍</button>
+            </div>
+
+            <div class="embeddings-section">
+              <h4 class="sub-panel-title">"<span id="current-embedding-word">dasturlash</span>" so'ziga eng yaqin semantik so'zlar:</h4>
+              <div class="similarity-cards-grid" id="similarity-grid"></div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
